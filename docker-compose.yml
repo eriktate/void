@@ -1,0 +1,23 @@
+version: "3"
+services:
+  # void:
+  #   build:
+  #     context: ./
+  #   image: void
+  #   environment:
+  #     VOID_DB_HOST: postgres
+  #     VOID_DB_USER: void
+  #     VOID_DB_PASSWORD: void
+  #   ports:
+  #     - 9001:9001
+  #   command: "./server"
+
+  postgres:
+    image: postgres:14.5
+    environment:
+      POSTGRES_DB: void
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: void
+    ports:
+      - 9002:5432
+
